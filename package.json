@@ -1,7 +1,7 @@
 {
     "name": "switcher",
     "displayName": "Switcher",
-    "description": "Switch between associated files using keybindings, context menu or command palette. Configured out of box to work with Angular, TypeScript, Sass and minified JS or CSS files.",
+    "description": "Switch between related files (same name, different extensions) using keybindings, context menu or command palette. Configured out of box to work with Angular, Razor Pages, TypeScript, Sass and minified JS or CSS files.",
     "publisher": "adrianwilczynski",
     "repository": {
         "type": "git",

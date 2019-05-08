@@ -1,6 +1,6 @@
 # Switcher
 
-Switch between associated files using keybindings, context menu or command palette. Configured out of box to work with Angular, Razor Pages, TypeScript, Sass and minified JS or CSS files.
+Switch between related files (same name, different extensions) using keybindings, context menu or command palette. Configured out of box to work with Angular, Razor Pages, TypeScript, Sass and minified JS or CSS files.
 
 Jump between:
 - Angular components, templates, stylesheets and tests,
