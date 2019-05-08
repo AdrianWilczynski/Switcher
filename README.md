@@ -33,7 +33,22 @@ Jump between:
 
 You can configure extension using `switcher.associations` property in settings file. Use IntelliSense to discover supported values.
 
+### Labels
+
+- `compiled` (Compiled)
+- `source` (Source)
+- `minified` (Minified)
+- `component` (Component)
+- `template` (Template)
+- `stylesheet` (Stylesheet)
+- `test` (Test)
+- `sut` (System Under Test)
+- `page` (Page)
+- `model` (Model)
+- `custom` (Custom)
+
 ### Default Configuration
+
 ```json
     "switcher.associations": [
         {
