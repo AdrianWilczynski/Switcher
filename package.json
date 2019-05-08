@@ -116,8 +116,7 @@
 			"explorer/context": [
 				{
 					"command": "extension.listAssociated",
-					"group": "navigation",
-					"when": "resourceScheme == file"
+					"group": "navigation"
 				}
 			]
 		},
