@@ -276,6 +276,15 @@
 								}
 							},
 							{
+								"extension": ".min.js",
+								"associated": {
+									"source": [
+										".ts",
+										".js"
+									]
+								}
+							},
+							{
 								"extension": ".js",
 								"associated": {
 									"source": [
@@ -283,6 +292,17 @@
 									],
 									"minified": [
 										".min.js"
+									]
+								}
+							},
+							{
+								"extension": ".min.css",
+								"associated": {
+									"source": [
+										".scss",
+										".sass",
+										".less",
+										".css"
 									]
 								}
 							},
