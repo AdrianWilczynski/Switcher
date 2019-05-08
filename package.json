@@ -116,7 +116,7 @@
 			"explorer/context": [
 				{
 					"command": "extension.listAssociated",
-					"group": "navigation"
+					"group": "0_goTo"
 				}
 			],
 			"commandPalette": [
