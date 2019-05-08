@@ -145,6 +145,7 @@
             "explorer/context": [
                 {
                     "command": "switcher.listAssociated",
+                    "when": "!explorerResourceIsRoot && !explorerResourceIsFolder",
                     "group": "0_goTo"
                 }
             ],
