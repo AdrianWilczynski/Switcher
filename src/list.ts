@@ -21,7 +21,7 @@ export async function listAssociated(uri: vscode.Uri | undefined) {
     const targetPaths = targets
         .map(t => getTargetPaths(sourcePath, association, t)
             .find(p => fs.existsSync(p)))
-        .filter(t => t !== undefined) as string[];
+        .filter(t => !!t) as string[];
 
     if (targetPaths.length === 0) {
         return;

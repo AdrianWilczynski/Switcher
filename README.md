@@ -1,65 +1,226 @@
-# switcher README
+# Switcher
 
-This is the README for your extension "switcher". After writing up a brief description, we recommend including the following sections.
+Switch between associated files using keybindings, context menu or command palette. Configured out of box to work with Angular, TypeScript, Sass and minified JS or CSS files.
 
-## Features
+Jump between:
+- Angular components, templates, stylesheets and tests,
+- TypeScript source code and transpiled JavaScript,
+- CSS files and their minified equivalents...
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+## See how it works
 
-For example if there is an image subfolder under your extension project workspace:
+![Example](img/example-individual.gif)
 
-\!\[feature X\]\(images/feature-x.png\)
+![Example](img/example-list.gif)
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+> Tip: You can access hidden/excluded files using `Go to...` command available through explorer's context menu.
 
-## Requirements
-
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+![Example](img/example-tip.gif)
 
 ## Extension Settings
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+You can configure extension using `switcher.associations` property in settings file. Use IntelliSense to discover supported values.
 
-For example:
-
-This extension contributes the following settings:
-
-* `myExtension.enable`: enable/disable this extension
-* `myExtension.thing`: set to `blah` to do something
-
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
------------------------------------------------------------------------------------------------------------
-
-## Working with Markdown
-
-**Note:** You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+CMD+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux) or `Cmd+Space` (macOS) to see a list of Markdown snippets
-
-### For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+### Default Configuration
+```json
+    "switcher.associations": [
+        {
+            "extension": ".component.ts",
+            "associated": {
+                "template": [
+                    ".component.html"
+                ],
+                "stylesheet": [
+                    ".component.css",
+                    ".component.scss",
+                    ".component.sass",
+                    ".component.less"
+                ],
+                "test": [
+                    ".component.spec.ts"
+                ]
+            }
+        },
+        {
+            "extension": ".component.spec.ts",
+            "associated": {
+                "component": [
+                    ".component.ts"
+                ],
+                "template": [
+                    ".component.html"
+                ],
+                "stylesheet": [
+                    ".component.css",
+                    ".component.scss",
+                    ".component.sass",
+                    ".component.less"
+                ]
+            }
+        },
+        {
+            "extension": ".component.html",
+            "associated": {
+                "component": [
+                    ".component.ts"
+                ],
+                "stylesheet": [
+                    ".component.css",
+                    ".component.scss",
+                    ".component.sass",
+                    ".component.less"
+                ],
+                "test": [
+                    ".component.spec.ts"
+                ]
+            }
+        },
+        {
+            "extension": ".component.css",
+            "associated": {
+                "component": [
+                    ".component.ts"
+                ],
+                "template": [
+                    ".component.html"
+                ],
+                "test": [
+                    ".component.spec.ts"
+                ]
+            }
+        },
+        {
+            "extension": ".component.scss",
+            "associated": {
+                "component": [
+                    ".component.ts"
+                ],
+                "template": [
+                    ".component.html"
+                ],
+                "test": [
+                    ".component.spec.ts"
+                ]
+            }
+        },
+        {
+            "extension": ".component.sass",
+            "associated": {
+                "component": [
+                    ".component.ts"
+                ],
+                "template": [
+                    ".component.html"
+                ],
+                "test": [
+                    ".component.spec.ts"
+                ]
+            }
+        },
+        {
+            "extension": ".component.less",
+            "associated": {
+                "component": [
+                    ".component.ts"
+                ],
+                "template": [
+                    ".component.html"
+                ],
+                "test": [
+                    ".component.spec.ts"
+                ]
+            }
+        },
+        {
+            "extension": ".ts",
+            "associated": {
+                "compiled": [
+                    ".js"
+                ],
+                "minified": [
+                    ".min.js"
+                ],
+                "test": [
+                    ".spec.ts"
+                ]
+            }
+        },
+        {
+            "extension": ".min.js",
+            "associated": {
+                "source": [
+                    ".ts",
+                    ".js"
+                ]
+            }
+        },
+        {
+            "extension": ".js",
+            "associated": {
+                "source": [
+                    ".ts"
+                ],
+                "minified": [
+                    ".min.js"
+                ]
+            }
+        },
+        {
+            "extension": ".min.css",
+            "associated": {
+                "source": [
+                    ".scss",
+                    ".sass",
+                    ".less",
+                    ".css"
+                ]
+            }
+        },
+        {
+            "extension": ".css",
+            "associated": {
+                "source": [
+                    ".scss",
+                    ".sass",
+                    ".less"
+                ],
+                "minified": [
+                    ".min.css"
+                ]
+            }
+        },
+        {
+            "extension": ".scss",
+            "associated": {
+                "compiled": [
+                    ".css"
+                ],
+                "minified": [
+                    ".min.css"
+                ]
+            }
+        },
+        {
+            "extension": ".sass",
+            "associated": {
+                "compiled": [
+                    ".css"
+                ],
+                "minified": [
+                    ".min.css"
+                ]
+            }
+        },
+        {
+            "extension": ".less",
+            "associated": {
+                "compiled": [
+                    ".css"
+                ],
+                "minified": [
+                    ".min.css"
+                ]
+            }
+        }
+    ]
+```
