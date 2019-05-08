@@ -26,11 +26,19 @@ function sanitizeConfiguration(configuration: any): Association[] {
 
 function isAssociation(value: any) {
     return !!(value
-        && (value as Association).extension
-        && (value as Association).associated) && isStringArrayDictionary((value as Association).associated);
+        && (value as Association).extension && isExtension((value as Association).extension)
+        && (value as Association).associated) && isExtensionArrayDict((value as Association).associated);
 }
 
-function isStringArrayDictionary(value: any) {
+function isExtensionArrayDict(value: any) {
     return Object.keys(value)
-        .every(k => Array.isArray(value[k]) && (value[k] as string[]).every(i => typeof i === 'string'));
+        .every(k => Array.isArray(value[k]) && (value[k] as string[]).every(isExtension));
+}
+
+function isExtension(value: any) {
+    if (typeof value !== 'string') {
+        return false;
+    }
+
+    return /^\.[\w.]+$/.test(value);
 }
