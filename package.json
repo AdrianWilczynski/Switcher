@@ -103,6 +103,28 @@
 				}
 			]
 		},
+		"keybindings": [
+			{
+				"command": "extension.goToComponent",
+				"key": "alt+i"
+			},
+			{
+				"command": "extension.goToTemplate",
+				"key": "alt+o"
+			},
+			{
+				"command": "extension.goToStylesheet",
+				"key": "alt+p"
+			},
+			{
+				"command": "extension.goToTest",
+				"key": "alt+["
+			},
+			{
+				"command": "extension.listAssociated",
+				"key": "alt+]"
+			}
+		],
 		"configuration": [
 			{
 				"title": "Associations",
