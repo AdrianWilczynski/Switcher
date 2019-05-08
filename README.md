@@ -17,6 +17,16 @@ Jump between:
 
 ![Example](img/example-tip.gif)
 
+## Default Keybindings
+
+| Key     | Command                    |
+|-------  |---                         |
+| Alt + i | Go to Component            |
+| Alt + o | Go to Template             |
+| Alt + p | Go to Stylesheet           |
+| Alt + [ | Go to Test                 |
+| Alt + ] | Go to...                   |
+
 ## Extension Settings
 
 You can configure extension using `switcher.associations` property in settings file. Use IntelliSense to discover supported values.
