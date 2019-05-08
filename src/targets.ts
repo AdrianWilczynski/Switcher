@@ -2,11 +2,11 @@ export class Target {
     constructor(public name: string) { }
 
     get commandName() {
-        return `extension.goTo${this.name}`;
+        return `switcher.goTo${this.name}`;
     }
 
     get configurationKey() {
-        return this.name.toLowerCase();
+        return this.name.toLocaleLowerCase();
     }
 
     get contextName() {
@@ -22,6 +22,8 @@ export const targets = [
     new Target('Template'),
     new Target('Stylesheet'),
     new Target('Test'),
-    new Target('SUT'),
+    new Target('Sut'),
+    new Target('Page'),
+    new Target('Model'),
     new Target('Custom'),
 ];

@@ -1,10 +1,11 @@
 # Switcher
 
-Switch between associated files using keybindings, context menu or command palette. Configured out of box to work with Angular, TypeScript, Sass and minified JS or CSS files.
+Switch between associated files using keybindings, context menu or command palette. Configured out of box to work with Angular, Razor Pages, TypeScript, Sass and minified JS or CSS files.
 
 Jump between:
 - Angular components, templates, stylesheets and tests,
 - TypeScript source code and transpiled JavaScript,
+- Razor Page and it's Page Model,
 - CSS files and their minified equivalents...
 
 ## See how it works
@@ -238,6 +239,22 @@ You can configure extension using `switcher.associations` property in settings f
                 ],
                 "minified": [
                     ".min.css"
+                ]
+            }
+        },
+        {
+            "extension": ".cshtml",
+            "associated": {
+                "model": [
+                    ".cshtml.cs"
+                ]
+            }
+        },
+        {
+            "extension": ".cshtml.cs",
+            "associated": {
+                "page": [
+                    ".cshtml"
                 ]
             }
         }

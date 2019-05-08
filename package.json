@@ -34,167 +34,193 @@
     "contributes": {
         "commands": [
             {
-                "command": "extension.goToCompiled",
+                "command": "switcher.goToCompiled",
                 "title": "Go to Compiled"
             },
             {
-                "command": "extension.goToSource",
+                "command": "switcher.goToSource",
                 "title": "Go to Source"
             },
             {
-                "command": "extension.goToMinified",
+                "command": "switcher.goToMinified",
                 "title": "Go to Minified"
             },
             {
-                "command": "extension.goToComponent",
+                "command": "switcher.goToComponent",
                 "title": "Go to Component"
             },
             {
-                "command": "extension.goToTemplate",
+                "command": "switcher.goToTemplate",
                 "title": "Go to Template"
             },
             {
-                "command": "extension.goToStylesheet",
+                "command": "switcher.goToStylesheet",
                 "title": "Go to Stylesheet"
             },
             {
-                "command": "extension.goToTest",
+                "command": "switcher.goToTest",
                 "title": "Go to Test"
             },
             {
-                "command": "extension.goToSUT",
+                "command": "switcher.goToSut",
                 "title": "Go to System Under Test"
             },
             {
-                "command": "extension.goToCustom",
+                "command": "switcher.goToPage",
+                "title": "Go to Page"
+            },
+            {
+                "command": "switcher.goToModel",
+                "title": "Go to Model"
+            },
+            {
+                "command": "switcher.goToCustom",
                 "title": "Go to Custom"
             },
             {
-                "command": "extension.listAssociated",
+                "command": "switcher.listAssociated",
                 "title": "Go to..."
             }
         ],
         "menus": {
             "editor/context": [
                 {
-                    "command": "extension.goToCompiled",
+                    "command": "switcher.goToCompiled",
                     "group": "0_goTo",
                     "when": "hasCompiled"
                 },
                 {
-                    "command": "extension.goToSource",
+                    "command": "switcher.goToSource",
                     "group": "0_goTo",
                     "when": "hasSource"
                 },
                 {
-                    "command": "extension.goToMinified",
+                    "command": "switcher.goToMinified",
                     "group": "0_goTo",
                     "when": "hasMinified"
                 },
                 {
-                    "command": "extension.goToComponent",
+                    "command": "switcher.goToComponent",
                     "group": "0_goTo",
                     "when": "hasComponent"
                 },
                 {
-                    "command": "extension.goToTemplate",
+                    "command": "switcher.goToTemplate",
                     "group": "0_goTo",
                     "when": "hasTemplate"
                 },
                 {
-                    "command": "extension.goToStylesheet",
+                    "command": "switcher.goToStylesheet",
                     "group": "0_goTo",
                     "when": "hasStylesheet"
                 },
                 {
-                    "command": "extension.goToTest",
+                    "command": "switcher.goToTest",
                     "group": "0_goTo",
                     "when": "hasTest"
                 },
                 {
-                    "command": "extension.goToSUT",
+                    "command": "switcher.goToSut",
                     "group": "0_goTo",
-                    "when": "hasSUT"
+                    "when": "hasSut"
                 },
                 {
-                    "command": "extension.goToCustom",
+                    "command": "switcher.goToPage",
+                    "group": "0_goTo",
+                    "when": "hasPage"
+                },
+                {
+                    "command": "switcher.goToModel",
+                    "group": "0_goTo",
+                    "when": "hasModel"
+                },
+                {
+                    "command": "switcher.goToCustom",
                     "group": "0_goTo",
                     "when": "hasCustom"
                 }
             ],
             "explorer/context": [
                 {
-                    "command": "extension.listAssociated",
+                    "command": "switcher.listAssociated",
                     "group": "0_goTo"
                 }
             ],
             "commandPalette": [
                 {
-                    "command": "extension.goToCompiled",
+                    "command": "switcher.goToCompiled",
                     "when": "hasCompiled"
                 },
                 {
-                    "command": "extension.goToSource",
+                    "command": "switcher.goToSource",
                     "when": "hasSource"
                 },
                 {
-                    "command": "extension.goToMinified",
+                    "command": "switcher.goToMinified",
                     "when": "hasMinified"
                 },
                 {
-                    "command": "extension.goToComponent",
+                    "command": "switcher.goToComponent",
                     "when": "hasComponent"
                 },
                 {
-                    "command": "extension.goToTemplate",
+                    "command": "switcher.goToTemplate",
                     "when": "hasTemplate"
                 },
                 {
-                    "command": "extension.goToStylesheet",
+                    "command": "switcher.goToStylesheet",
                     "when": "hasStylesheet"
                 },
                 {
-                    "command": "extension.goToTest",
+                    "command": "switcher.goToTest",
                     "when": "hasTest"
                 },
                 {
-                    "command": "extension.goToSUT",
-                    "when": "hasSUT"
+                    "command": "switcher.goToSut",
+                    "when": "hasSut"
                 },
                 {
-                    "command": "extension.goToCustom",
+                    "command": "switcher.goToPage",
+                    "when": "hasPage"
+                },
+                {
+                    "command": "switcher.goToModel",
+                    "when": "hasModel"
+                },
+                {
+                    "command": "switcher.goToCustom",
                     "when": "hasCustom"
                 }
             ]
         },
         "keybindings": [
             {
-                "command": "extension.goToComponent",
+                "command": "switcher.goToComponent",
                 "key": "alt+i",
                 "when": "hasComponent"
             },
             {
-                "command": "extension.goToTemplate",
+                "command": "switcher.goToTemplate",
                 "key": "alt+o",
                 "when": "hasTemplate"
             },
             {
-                "command": "extension.goToStylesheet",
+                "command": "switcher.goToStylesheet",
                 "key": "alt+p",
                 "when": "hasStylesheet"
             },
             {
-                "command": "extension.goToTest",
+                "command": "switcher.goToTest",
                 "key": "alt+[",
                 "when": "hasTest"
             },
             {
-                "command": "extension.goToSUT",
+                "command": "switcher.goToSut",
                 "key": "alt+i",
-                "when": "hasSUT && !hasComponent"
+                "when": "hasSut && !hasComponent"
             },
             {
-                "command": "extension.listAssociated",
+                "command": "switcher.listAssociated",
                 "key": "alt+]"
             }
         ],
@@ -256,6 +282,18 @@
                                             }
                                         },
                                         "sut": {
+                                            "type": "array",
+                                            "items": {
+                                                "type": "string"
+                                            }
+                                        },
+                                        "page": {
+                                            "type": "array",
+                                            "items": {
+                                                "type": "string"
+                                            }
+                                        },
+                                        "model": {
                                             "type": "array",
                                             "items": {
                                                 "type": "string"
@@ -475,6 +513,22 @@
                                     ],
                                     "minified": [
                                         ".min.css"
+                                    ]
+                                }
+                            },
+                            {
+                                "extension": ".cshtml",
+                                "associated": {
+                                    "model": [
+                                        ".cshtml.cs"
+                                    ]
+                                }
+                            },
+                            {
+                                "extension": ".cshtml.cs",
+                                "associated": {
+                                    "page": [
+                                        ".cshtml"
                                     ]
                                 }
                             }
