@@ -27,7 +27,7 @@ function sanitizeConfiguration(configuration: any): Association[] {
 function isAssociation(value: any) {
     return !!(value
         && (value as Association).extension && isExtension((value as Association).extension)
-        && (value as Association).associated) && isExtensionArrayDict((value as Association).associated);
+        && (value as Association).associated && isExtensionArrayDict((value as Association).associated));
 }
 
 function isExtensionArrayDict(value: any) {
