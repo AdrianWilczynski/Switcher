@@ -146,7 +146,7 @@
                 {
                     "command": "switcher.listAssociated",
                     "when": "!explorerResourceIsRoot && !explorerResourceIsFolder",
-                    "group": "0_goTo"
+                    "group": "navigation"
                 }
             ],
             "commandPalette": [
