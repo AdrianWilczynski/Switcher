@@ -25,7 +25,9 @@
         "GoTo",
         "Keybindings",
         "Keybinding",
-        "Angular"
+        "Angular",
+        "Razor Pages",
+        "ASP.NET Core"
     ],
     "activationEvents": [
         "*"
