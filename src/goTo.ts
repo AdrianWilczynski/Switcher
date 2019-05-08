@@ -20,6 +20,7 @@ export function goTo(target: Target) {
 
         const existingPath = targetPaths.find(p => fs.existsSync(p));
         if (!existingPath) {
+            vscode.window.showWarningMessage('Unable to find a matching file.');
             return;
         }
 
