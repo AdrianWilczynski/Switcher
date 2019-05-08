@@ -57,42 +57,42 @@
 				{
 					"command": "extension.goToCompiled",
 					"group": "0_goTo",
-					"when": "editorTextFocus && hasCompiled"
+					"when": "hasCompiled"
 				},
 				{
 					"command": "extension.goToSource",
 					"group": "0_goTo",
-					"when": "editorTextFocus && hasSource"
+					"when": "hasSource"
 				},
 				{
 					"command": "extension.goToMinified",
 					"group": "0_goTo",
-					"when": "editorTextFocus && hasMinified"
+					"when": "hasMinified"
 				},
 				{
 					"command": "extension.goToComponent",
 					"group": "0_goTo",
-					"when": "editorTextFocus && hasComponent"
+					"when": "hasComponent"
 				},
 				{
 					"command": "extension.goToTemplate",
 					"group": "0_goTo",
-					"when": "editorTextFocus && hasTemplate"
+					"when": "hasTemplate"
 				},
 				{
 					"command": "extension.goToStylesheet",
 					"group": "0_goTo",
-					"when": "editorTextFocus && hasStylesheet"
+					"when": "hasStylesheet"
 				},
 				{
 					"command": "extension.goToTest",
 					"group": "0_goTo",
-					"when": "editorTextFocus && hasTest"
+					"when": "hasTest"
 				},
 				{
 					"command": "extension.goToCustom",
 					"group": "0_goTo",
-					"when": "editorTextFocus && hasCustom"
+					"when": "hasCustom"
 				}
 			],
 			"explorer/context": [
@@ -207,6 +207,23 @@
 									],
 									"test": [
 										".component.spec.ts"
+									]
+								}
+							},
+							{
+								"extension": ".component.spec.ts",
+								"associated": {
+									"component": [
+										".component.ts"
+									],
+									"template": [
+										".component.html"
+									],
+									"stylesheet": [
+										".component.css",
+										".component.scss",
+										".component.sass",
+										".component.less"
 									]
 								}
 							},
