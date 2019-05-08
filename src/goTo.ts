@@ -1,7 +1,7 @@
 import * as vscode from 'vscode';
 import * as fs from 'fs';
 import { Target } from './targets';
-import { getAssociationFor, Association } from './configuration';
+import { getAssociationFor } from './configuration';
 import { isOpenFileValid } from './guard';
 import { getTargetPaths } from './fileLocalizer';
 
