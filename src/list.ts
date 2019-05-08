@@ -15,6 +15,7 @@ export async function listAssociated(uri: vscode.Uri | undefined) {
 
     const association = getAssociationFor(sourcePath);
     if (!association) {
+        vscode.window.showWarningMessage("Associations not configured for this file's extension.");
         return;
     }
 
@@ -24,6 +25,7 @@ export async function listAssociated(uri: vscode.Uri | undefined) {
         .filter(t => !!t) as string[];
 
     if (targetPaths.length === 0) {
+        vscode.window.showWarningMessage('Unable to find matching files.');
         return;
     }
 
