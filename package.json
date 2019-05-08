@@ -123,19 +123,23 @@
 		"keybindings": [
 			{
 				"command": "extension.goToComponent",
-				"key": "alt+i"
+				"key": "alt+i",
+				"when": "hasComponent"
 			},
 			{
 				"command": "extension.goToTemplate",
-				"key": "alt+o"
+				"key": "alt+o",
+				"when": "hasTemplate"
 			},
 			{
 				"command": "extension.goToStylesheet",
-				"key": "alt+p"
+				"key": "alt+p",
+				"when": "hasStylesheet"
 			},
 			{
 				"command": "extension.goToTest",
-				"key": "alt+["
+				"key": "alt+[",
+				"when": "hasTest"
 			},
 			{
 				"command": "extension.listAssociated",
