@@ -9,7 +9,7 @@ export function activate(context: vscode.ExtensionContext) {
 
 	context.subscriptions.push(
 		...targets.map(t => vscode.commands.registerCommand(t.commandName, goTo(t))),
-		vscode.commands.registerCommand('extension.listAssociated', listAssociated),
+		vscode.commands.registerCommand('switcher.listAssociated', listAssociated),
 		vscode.window.onDidChangeActiveTextEditor(setContexts)
 	);
 }
