@@ -22,5 +22,6 @@ export const targets = [
     new Target('Template'),
     new Target('Stylesheet'),
     new Target('Test'),
+    new Target('SUT'),
     new Target('Custom'),
 ];
