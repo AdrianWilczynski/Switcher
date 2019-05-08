@@ -118,6 +118,40 @@
 					"command": "extension.listAssociated",
 					"group": "navigation"
 				}
+			],
+			"commandPalette": [
+				{
+					"command": "extension.goToCompiled",
+					"when": "hasCompiled"
+				},
+				{
+					"command": "extension.goToSource",
+					"when": "hasSource"
+				},
+				{
+					"command": "extension.goToMinified",
+					"when": "hasMinified"
+				},
+				{
+					"command": "extension.goToComponent",
+					"when": "hasComponent"
+				},
+				{
+					"command": "extension.goToTemplate",
+					"when": "hasTemplate"
+				},
+				{
+					"command": "extension.goToStylesheet",
+					"when": "hasStylesheet"
+				},
+				{
+					"command": "extension.goToTest",
+					"when": "hasTest"
+				},
+				{
+					"command": "extension.goToCustom",
+					"when": "hasCustom"
+				}
 			]
 		},
 		"keybindings": [
