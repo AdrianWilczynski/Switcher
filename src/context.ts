@@ -1,9 +1,10 @@
 import * as vscode from 'vscode';
 import { Target, targets } from './targets';
 import { getAssociationFor } from './configuration';
+import { isOpenFileValid } from './guard';
 
 export function setContexts(editor: vscode.TextEditor | undefined) {
-    if (!editor || editor.document.isUntitled) {
+    if (!editor || !isOpenFileValid(editor)) {
         clearContexts();
         return;
     }

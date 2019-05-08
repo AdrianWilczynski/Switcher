@@ -46,6 +46,10 @@
 			{
 				"command": "extension.goToCustom",
 				"title": "Go to Custom"
+			},
+			{
+				"command": "extension.listAssociated",
+				"title": "Go to..."
 			}
 		],
 		"menus": {
@@ -89,6 +93,13 @@
 					"command": "extension.goToCustom",
 					"group": "0_goTo",
 					"when": "editorTextFocus && hasCustom"
+				}
+			],
+			"explorer/context": [
+				{
+					"command": "extension.listAssociated",
+					"group": "navigation",
+					"when": "resourceScheme == file"
 				}
 			]
 		},

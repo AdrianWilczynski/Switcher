@@ -1,12 +1,13 @@
 import * as vscode from 'vscode';
-import * as path from 'path';
 import * as fs from 'fs';
 import { Target } from './targets';
 import { getAssociationFor, Association } from './configuration';
+import { isOpenFileValid } from './guard';
+import { getTargetPaths } from './fileLocalizer';
 
 export function goTo(target: Target) {
     return async () => {
-        if (!vscode.window.activeTextEditor) {
+        if (!vscode.window.activeTextEditor || !isOpenFileValid(vscode.window.activeTextEditor)) {
             return;
         }
 
@@ -15,10 +16,7 @@ export function goTo(target: Target) {
             return;
         }
 
-        const targetPaths = await getTargetPaths(vscode.window.activeTextEditor.document.fileName, association, target);
-        if (!targetPaths) {
-            return;
-        }
+        const targetPaths = getTargetPaths(vscode.window.activeTextEditor.document.fileName, association, target);
 
         const existingPath = targetPaths.find(p => fs.existsSync(p));
         if (!existingPath) {
@@ -30,14 +28,3 @@ export function goTo(target: Target) {
     };
 }
 
-async function getTargetPaths(sourcePath: string, association: Association, target: Target) {
-    const baseName = path.basename(sourcePath, association.extension);
-    const directory = path.dirname(sourcePath);
-
-    const targetExtensions = association.associated[target.configurationKey];
-    if (!targetExtensions) {
-        return;
-    }
-
-    return targetExtensions.map(e => path.join(directory, baseName + e));
-}
