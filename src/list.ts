@@ -21,8 +21,8 @@ export async function listAssociated(uri: vscode.Uri | undefined) {
 
     const targetPaths = targets
         .map(t => getTargetPaths(sourcePath, association, t)
-            .find(p => fs.existsSync(p)))
-        .filter(t => !!t) as string[];
+            .filter(p => fs.existsSync(p)))
+        .reduce((a, b) => a.concat(b)) as string[];
 
     if (targetPaths.length === 0) {
         vscode.window.showWarningMessage('Unable to find matching files.');
